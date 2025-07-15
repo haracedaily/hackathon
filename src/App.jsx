@@ -1,18 +1,32 @@
 import { useState } from 'react'
-import {Search, Bell, User, Home, FileText, BarChart3, Settings, Users, Calendar, LogOut} from "lucide-react"
+import {
+  Search,
+  Bell,
+  User,
+  Home,
+  FileText,
+  BarChart3,
+  Settings,
+  Users,
+  Calendar,
+  LogOut,
+  ChevronRight,
+  ChevronLeft
+} from "lucide-react"
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
   const [activeMenu, setActiveMenu] = useState("대시보드")
-
+  const [sideCollapse,setSideCollapse] = useState(false);
   const menuItems = [
-    { name: "대시보드", icon: Home, active: true },
-    { name: "측정관리", icon: FileText },
+    { name: "대시보드", icon: Home, active: true, group:1 },
+    { name: "측정관리", icon: FileText,group:2 },
     { name: "통계", icon: BarChart3 },
     { name: "설정", icon: Settings },
-    { name: "사용자관리", icon: Users },
+    { name: "사용자관리", icon: Users,group:3 },
   ]
+  const menuGroup = ["전체 보기","서비스 관리","고객센터","시스템 설정"]
 
   const measurementData = [
     {
@@ -81,33 +95,60 @@ function App() {
   const months = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
   return (
     <>
+      <div className={"fixed top-[25%] left-[35%] w-[400px] h-[500px] bg-amber-200 z-1 none"}>
+
+      </div>
       <div className="min-h-screen h-screen bg-gray-100">
         {/* Header */}
-        <header className="bg-white shadow-sm border-b">
+        <header className="bg-white shadow-sm border-b h-[7vh] fixed top-0 w-full z-1">
           <div className="flex items-center justify-between px-6 py-4">
             <div className="flex items-center space-x-4">
                 <img src={"/title.png"} className={"h-8"}/>
             </div>
             <div className="flex items-center space-x-4">
+              <span>로그인님</span>
               <User className="w-5 h-5 text-gray-500" />
               <LogOut className="w-5 h-5 text-gray-500" />
             </div>
           </div>
         </header>
 
-        <div className="flex">
+        <div className="flex h-[93vh] overflow-y-scroll">
           {/* Sidebar */}
-          <aside className="w-64 bg-gray-800 min-h-screen">
-            <div className="p-4">
+          <aside className="w-64 fixed left-0 top-[7vh] z-1">
+            <div className={"bg-[#768395] flex flex-col justify-between h-screen relative"}>
+            <div className="">
+
               <div className="text-white text-sm mb-6">
-                <div className="bg-blue-600 px-3 py-2 rounded">
+                <div className="bg-[#768395] px-3 py-2 rounded">
                   <span>대시보드</span>
                 </div>
               </div>
+
+
+
               <nav className="space-y-2">
                 {menuItems.map((item) => {
                   const Icon = item.icon
-                  return (
+                  return item.group?(
+                      <>
+                          <div className="text-white text-sm">
+                            <div className="bg-[#6A7585] p-2 pl-4">
+                              <span>{menuGroup[item.group-1]}</span>
+                            </div>
+                          </div>
+                      <button
+                      key={item.name}
+                      onClick={() => setActiveMenu(item.name)}
+                      className={`w-full flex items-center space-x-3 px-3 py-2 rounded text-sm transition-colors ${
+                          activeMenu === item.name ? "bg-blue-600 text-white" : "text-gray-300 hover:bg-gray-700"
+                      }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                  </button>
+                      </>
+                  ):(
                       <button
                           key={item.name}
                           onClick={() => setActiveMenu(item.name)}
@@ -122,19 +163,21 @@ function App() {
                 })}
               </nav>
             </div>
-            <div className="absolute bottom-4 left-4 right-4">
+            <div className="">
               <div className="text-gray-400 text-xs">
                 <div className="flex items-center space-x-2 mb-2">
                   <User className="w-4 h-4" />
-                  <span>사용자이름</span>
+                  <span>내이름</span>
                 </div>
                 <button className="text-gray-500 text-xs hover:text-gray-300">로그아웃</button>
               </div>
             </div>
+              {sideCollapse?(<ChevronRight className={"absolute top-0 right-[-1rem] bg-[#768395]"} onClick={()=>setSideCollapse(!sideCollapse)}/>):(<ChevronLeft className={"absolute top-0 right-[-1rem] bg-[#768395]"} onClick={()=>setSideCollapse(!sideCollapse)}/>)}
+            </div>
           </aside>
 
           {/* Main Content */}
-          <main className="flex-1 p-6">
+          <main className="flex-1 mt-[7vh] ml-64 p-[1.7rem]">
             {/* Dashboard Cards */}
             <div className="bg-blue-500 rounded-lg p-6 mb-6">
               <div className="flex items-center justify-between mb-4">
@@ -210,7 +253,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="overflow-x-auto">
+                  <div className="overflow-scroll">
                     <table className="w-full">
                       <thead className="bg-gray-100">
                       <tr>
