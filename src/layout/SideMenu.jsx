@@ -33,7 +33,7 @@ function SideMenu(props) {
                             const Icon = item.icon
                             return item.group?(
                                 <>
-                                    <div className="text-white text-sm">
+                                    <div key={"bar-"+item.route} className="text-white text-sm">
                                         <div className="bg-[#6A7585] p-2 pl-4">
                                             <span>{menuGroup[item.group-1]}</span>
                                         </div>
@@ -79,7 +79,7 @@ function SideMenu(props) {
                         <button className="text-gray-500 text-xs hover:text-gray-300">로그아웃</button>
                     </div>
                 </div>
-                {props.sideCollapse?(<ChevronRight className={"absolute top-0 right-[-1.3rem] bg-[#768395] z-1"} onClick={()=>props.setSideCollapse(!props.sideCollapse)}/>):(<ChevronLeft className={"absolute top-0 right-[-1.3rem] bg-[#768395] z-1"} onClick={()=>props.setSideCollapse(!props.sideCollapse)}/>)}
+                {props.sideCollapse?(<ChevronRight key={"sideMenuOpenClick"} className={"absolute top-0 right-[-1.3rem] bg-[#768395] z-1"} onClick={()=>props.setSideCollapse(!props.sideCollapse)}/>):(<ChevronLeft key={"sideMenuCloseClick"} className={"absolute top-0 right-[-1.3rem] bg-[#768395] z-1"} onClick={()=>props.setSideCollapse(!props.sideCollapse)}/>)}
             </div>
         </aside>
     );
