@@ -32,7 +32,7 @@ function SideMenu(props) {
                         {menuItems.map((item) => {
                             const Icon = item.icon
                             return item.group?(
-                                <>
+                                <React.Fragment key={item.route}>
                                     <div key={"bar-"+item.route} className="text-white text-sm">
                                         <div className="bg-[#6A7585] p-2 pl-4">
                                             <span>{menuGroup[item.group-1]}</span>
@@ -51,7 +51,7 @@ function SideMenu(props) {
                                         <Icon className="w-4 h-4" />
                                         <span>{item.name}</span>
                                     </button>
-                                </>
+                                </React.Fragment>
                             ):(
                                 <button
                                     key={item.route}

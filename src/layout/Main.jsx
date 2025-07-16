@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import DashBoard from "../pages/DY/DashBoard.jsx";
 import Notice from "../pages/JO/Notice.jsx";
 import Review from "../pages/JO/Review.jsx";
@@ -10,7 +10,6 @@ import Autho from "../pages/JH/Autho.jsx";
 
 function Main({isTablet}) {
     return (
-    <Router>
         <Routes>
             <Route path="/" element={<DashBoard isTablet={isTablet} />} />
             <Route path="/user" element={<User isTablet={isTablet} />} />
@@ -20,7 +19,6 @@ function Main({isTablet}) {
             <Route path="/faq" element={<Faq isTablet={isTablet} />} />
             <Route path="/autho" element={<Autho isTablet={isTablet} />} />
         </Routes>
-    </Router>
     );
 }
 
