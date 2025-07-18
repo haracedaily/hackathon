@@ -39,9 +39,9 @@ function UserDetail({ user, onClose }) {
                     </div>
                     <div className="flex justify-between items-center mb-4">
                         <span className="font-bold">차단</span>
-                        <label class={UserD.switch}>
+                        <label className={UserD.switch}>
                             <input type="checkbox" />
-                            <span class={UserD.slider}></span>
+                            <span className={UserD.slider}></span>
                         </label>
                     </div>
                     <div className="flex justify-between items-center mb-4">

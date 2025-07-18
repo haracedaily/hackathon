@@ -38,17 +38,17 @@ function User({ isTablet }) {
                 <h1 className="text-2xl text-[#656565] font-bold">회원관리</h1>
             </div>
             <div className='flex flex-wrap items-center gap-5 mt-5'>
-                <div className='flex flex-1 justify-between items-center min-w-[215px] min-h-[134px] bg-white rounded-lg p-4'>
+                <div className='flex flex-1 justify-between items-center min-w-[215px] min-h-[126px] bg-white rounded-lg p-4'>
                     <div>
                         <p className='text-[#656565]'>총 회원 수</p>
-                        <p className='text-3xl font-bold my-2'>150명</p>
+                        <p className='text-3xl font-bold mb-2'>150명</p>
                         <p className='text-[#656565]'>-2명 차단</p>
                     </div>
                     <div>
                         <img src="/images/headbox1.svg" />
                     </div>
                 </div>
-                <div className='flex flex-1 justify-between items-center min-w-[215px] min-h-[134px] bg-white rounded-lg p-4'>
+                <div className='flex flex-1 justify-between items-center min-w-[215px] min-h-[126px] bg-white rounded-lg p-4'>
                     <div>
                         <p className='text-[#656565]'>방문객</p>
                         <p className='text-3xl font-bold mt-2'>120명</p>
@@ -57,7 +57,7 @@ function User({ isTablet }) {
                         <img src="/images/headbox2.svg" />
                     </div>
                 </div>
-                <div className='flex flex-1 justify-between items-center min-w-[215px] min-h-[134px] bg-white rounded-lg p-4'>
+                <div className='flex flex-1 justify-between items-center min-w-[215px] min-h-[126px] bg-white rounded-lg p-4'>
                     <div>
                         <p className='text-[#656565]'>관리자</p>
                         <p className='text-3xl font-bold mt-2'>28명</p>
@@ -125,12 +125,12 @@ function User({ isTablet }) {
                         <thead className='text-white bg-[#768395] h-[66px]'>
                             <tr>
                                 <th className="w-[10%]">번호</th>
-                                <th className="w-[20%]">회원이름</th>
+                                <th className="w-[15%]">회원이름</th>
                                 <th className="w-[20%]">아이디</th>
                                 <th className="w-[15%] pl-2">회원구분</th>
                                 <th className="w-[10%]">상태</th>
                                 <th className="w-[20%]">마지막 접속</th>
-                                <th className="w-[10%]">관리</th>
+                                <th className="w-[15%]">관리</th>
                             </tr>
                         </thead>
                         <tbody className='text-center'>
@@ -164,6 +164,19 @@ function User({ isTablet }) {
                                     <td className='text-center pt-2 h-[66px] gap-2 min-w-[70px] cursor-auto'
                                         onClick={e => e.stopPropagation()}
                                     >
+                                        <button className="cursor-pointer">
+                                            <img src="/images/memberbtn1.svg"
+                                                alt="btn1"
+                                                className="w-8 h-8"
+                                                onClick={() => {
+                                                    if (selectedUser?.id === user.id) {
+                                                        setSelectedUser(null);
+                                                    } else {
+                                                        setSelectedUser(user);
+                                                    }
+                                                }}
+                                            />
+                                        </button>
                                         <button className="cursor-pointer">
                                             <img src="/images/memberbtn2.svg"
                                                 alt="btn2"
