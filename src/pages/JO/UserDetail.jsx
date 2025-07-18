@@ -12,7 +12,6 @@ function UserDetail({ user, onClose }) {
                     <span>&times;</span>
                 </button>
             </div>
-            {user ? (
                 <div className="p-4">
                     <div className="flex justify-between items-center mb-4">
                         <span className="font-bold">이름</span>
@@ -54,11 +53,6 @@ function UserDetail({ user, onClose }) {
                         <span>{user.lastLogin}</span>
                     </div>
                 </div>
-            ) : (
-                <div className="p-4 text-gray-400">
-                    회원을 선택해주세요.
-                </div>
-            )}
         </div>
     );
 }
