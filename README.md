@@ -35,7 +35,7 @@
 | **Environment** | WebStorm / VSCode / Cursor / Vercel / CloudType / PWA / Postman |
 | **Front**       | HTML / CSS / JavaScript / React / Tailwind / Vite / Axios      |
 | **Back**        | Node.js / Express.js                                           |
-| **API**         | Kakao Map API / Gemini API / 날씨 API                          |
+| **API**         | Kakao Map API / Gemini AI API / 날씨 API                          |
 | **Data**        | Supabase                                                       |
 
 
