@@ -33,7 +33,7 @@
 | --------------- | -------------------------------------------------------------- |
 | **Tool**        | Figma / Photoshop / Illustrator / Notion / GitHub / Sourcetree |
 | **Environment** | WebStorm / VSCode / Cursor / Vercel / CloudType / PWA / Postman |
-| **Front**       | HTML / CSS / JavaScript / React / Tailwind CSS / Vite / Axios  |
+| **Front**       | HTML / CSS / JavaScript / React / Tailwind / Vite / Axios      |
 | **Back**        | Node.js / Express.js                                           |
 | **API**         | Kakao Map API / Gemini API / 날씨 API                          |
 | **Data**        | Supabase                                                       |
