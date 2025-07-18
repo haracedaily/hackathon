@@ -29,20 +29,15 @@
 
 ## 🛠️ 사용 기술 스택
 
-### 💻 Frontend
-- **React**, Vite
-- **Tailwind CSS**
-- Axios
-- Kakao Maps API, 기상청 기상 조회 API 
+| 구분              | 기술 스택                                                          |
+| --------------- | -------------------------------------------------------------- |
+| **Tool**        | Figma / Photoshop / Illustrator / Notion / GitHub / Sourcetree |
+| **Environment** | WebStorm / VSCode / Cursor / Vercel / CloudType / PWA / Postman |
+| **Front**       | HTML / CSS / JavaScript / React / Tailwind CSS / Vite / Axios  |
+| **Back**        | Node.js / Express.js                                           |
+| **API**         | Kakao Map API / Gemini API / 날씨 API                          |
+| **Data**        | Supabase                                                       |
 
-### 🧠 Backend
-- **Node.js**, Express
-- **Supabase** (인증 & DB)
-
-### ⚙️ 기타
-- Figma (디자인)
-- Git, GitHub (버전 관리)
-- Notion (기획 및 일정 관리)
 
 ---
 
