@@ -68,8 +68,8 @@ function User({ isTablet }) {
                 </div>
             </div>
             <div className='flex flex-wrap items-center justify-between bg-white rounded-lg p-4 my-5 gap-7'>
-                <div className="flex flex-wrap items-center gap-7">
-                    <div className='relative w-[300px]'>
+                <div className="flex flex-wrap items-center gap-4">
+                    <div className='relative w-[235px]'>
                         <input type="text"
                             placeholder='회원이름을 검색해주세요.'
                             className="w-full border border-gray-300 rounded-lg p-2 pl-10"
@@ -80,18 +80,18 @@ function User({ isTablet }) {
                             className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
                         />
                     </div>
-                    <div className="flex flex-wrap items-center gap-7">
+                    <div className="flex flex-wrap items-center gap-4">
                         <div className='flex items-center gap-2'>
-                            <p className='text-[#656565] w-[70px]'>회원구분</p>
-                            <select className="border w-[100px] border-gray-300 text-[#656565] rounded-lg py-2 text-center">
+                            <p className='text-[#656565] w-[65px]'>회원구분</p>
+                            <select className="border w-[90px] border-gray-300 text-[#656565] rounded-lg py-2 text-center">
                                 <option value="all">전체</option>
                                 <option value="member">방문객</option>
                                 <option value="partner">관계자</option>
                             </select>
                         </div>
                         <div className='flex items-center gap-2'>
-                            <p className='text-[#656565] w-[70px]'>차단상태</p>
-                            <select className="border w-[100px] border-gray-300 text-[#656565] rounded-lg py-2 text-center">
+                            <p className='text-[#656565] w-[65px]'>차단상태</p>
+                            <select className="border w-[90px] border-gray-300 text-[#656565] rounded-lg py-2 text-center">
                                 <option value="all" className='text-center'>전체</option>
                                 <option value="active">활성</option>
                                 <option value="block">차단</option>
@@ -99,7 +99,7 @@ function User({ isTablet }) {
                         </div>
                     </div>
                     <div>
-                        <button className='bg-[#768395] text-white font-bold rounded-lg py-2 px-4 w-[100px] cursor-pointer'>
+                        <button className='bg-[#768395] text-white font-bold rounded-lg py-2 px-4 w-[90px] cursor-pointer'>
                             검색
                         </button>
                     </div>

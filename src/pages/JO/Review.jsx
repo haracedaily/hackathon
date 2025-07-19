@@ -76,9 +76,9 @@ function Review({ isTablet }) {
             </div>
             <div className='bg-white rounded-lg p-4 my-5'>
                 <div className="flex flex-wrap items-center gap-5">
-                    <div className='relative w-[280px]'>
+                    <div className='relative w-[235px]'>
                         <input type="text"
-                            placeholder='제목 또는 이름을 검색해주세요.'
+                            placeholder='제목을 입력해주세요.'
                             className="w-full border border-gray-300 rounded-lg p-2 pl-10"
                         />
                         <img
@@ -94,19 +94,19 @@ function Review({ isTablet }) {
                             onChange={date => setStartDate(date)}
                             dateFormat="yyyy-MM-dd"
                             placeholderText="날짜 선택"
-                            className="border border-gray-300 rounded-lg p-2 w-[140px] text-center"
+                            className="border border-gray-300 rounded-lg p-2 w-[110px] text-center"
                         />
                     </div>
                     <div className='flex items-center gap-2'>
-                        <p className='text-[#656565] w-[70px]'>리뷰구분</p>
-                        <select className="border w-[100px] border-gray-300 text-[#656565] rounded-lg py-2 text-center">
+                        <p className='text-[#656565] w-[65px]'>리뷰구분</p>
+                        <select className="border w-[90px] border-gray-300 text-[#656565] rounded-lg py-2 text-center">
                             <option value="all">전체</option>
                             <option value="public">공개</option>
                             <option value="pprivate">비공개</option>
                         </select>
                     </div>
                     <div>
-                        <button className='bg-[#768395] text-white font-bold rounded-lg py-2 px-4 w-[100px] cursor-pointer'>
+                        <button className='bg-[#768395] text-white font-bold rounded-lg py-2 px-4 w-[90px] cursor-pointer'>
                             검색
                         </button>
                     </div>

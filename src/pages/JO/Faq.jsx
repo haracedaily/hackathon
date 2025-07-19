@@ -39,7 +39,7 @@ function Faq({ isTablet }) {
                 <h1 className="text-2xl text-[#656565] font-bold">FAQ</h1>
             </div>
             <div className='flex flex-wrap items-center justify-between bg-white rounded-lg p-4 my-5 gap-7'>
-                <div className="flex flex-wrap items-center gap-7">
+                <div className="flex flex-wrap items-center gap-4">
                     <div className='relative w-[300px]'>
                         <input type="text"
                             placeholder='제목 또는 내용을 입력해주세요.'
@@ -51,20 +51,22 @@ function Faq({ isTablet }) {
                             className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
                         />
                     </div>
-                    <div className="flex flex-wrap items-center">
-                        <div className='flex items-center gap-2'>
-                            <p className='text-[#656565] mr-1'>종류</p>
-                            <select className="border w-[100px] border-gray-300 text-[#656565] rounded-lg py-2 text-center">
-                                <option value="all" className='text-center'>전체</option>
-                                <option value="public">공개</option>
-                                <option value="private">비공개</option>
-                            </select>
+                    <div className="flex flex-wrap items-center gap-5">
+                        <div className="flex flex-wrap items-center">
+                            <div className='flex items-center gap-2'>
+                                <p className='text-[#656565] mr-1'>종류</p>
+                                <select className="border w-[100px] border-gray-300 text-[#656565] rounded-lg py-2 text-center">
+                                    <option value="all" className='text-center'>전체</option>
+                                    <option value="public">공개</option>
+                                    <option value="private">비공개</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <button className='bg-[#768395] text-white font-bold rounded-lg py-2 px-4 w-[100px] cursor-pointer'>
-                            검색
-                        </button>
+                        <div>
+                            <button className='bg-[#768395] text-white font-bold rounded-lg py-2 px-4 w-[90px] cursor-pointer'>
+                                검색
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div>
