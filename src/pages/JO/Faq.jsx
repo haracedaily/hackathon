@@ -42,7 +42,7 @@ function Faq({ isTablet }) {
                 <div className="flex flex-wrap items-center gap-7">
                     <div className='relative w-[300px]'>
                         <input type="text"
-                            placeholder='제목 또는 이름을 입력해주세요.'
+                            placeholder='제목 또는 내용을 입력해주세요.'
                             className="w-full border border-gray-300 rounded-lg p-2 pl-10"
                         />
                         <img
