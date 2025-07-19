@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import Pagination from "../../component/Pagination";
@@ -39,12 +39,12 @@ function Review({ isTablet }) {
                 <h1 className="text-2xl text-[#656565] font-bold">리뷰관리</h1>
             </div>
             <div className='flex flex-wrap items-center gap-5 mt-5'>
-                <div className='flex-1 min-w-[215px] bg-[#6C93FF] rounded-lg p-4'>
+                <div className='flex-1 min-w-[300px] bg-[#6C93FF] rounded-lg p-4'>
                     <div className='flex items-center gap-5 text-white'>
                         <p className='font-bold'>총 리뷰</p>
                         <p className='text-2xl font-bold'>64건</p>
                     </div>
-                    <div className='flex flex-wrap justify-around items-center rounded-lg mt-2 bg-white mx-auto'>
+                    <div className='flex justify-around items-center rounded-lg mt-2 bg-white mx-auto'>
                         <div className='flex items-center h-[54px] gap-5'>
                             <p className='bg-[#6C93FF] rounded-full w-13 text-white text-center p-1'>공개</p>
                             <p className='text-2xl font-bold'>60건</p>
@@ -75,8 +75,8 @@ function Review({ isTablet }) {
                 </div>
             </div>
             <div className='bg-white rounded-lg p-4 my-5'>
-                <div className="flex flex-wrap items-center gap-7">
-                    <div className='relative w-[300px]'>
+                <div className="flex flex-wrap items-center gap-5">
+                    <div className='relative w-[280px]'>
                         <input type="text"
                             placeholder='제목 또는 이름을 검색해주세요.'
                             className="w-full border border-gray-300 rounded-lg p-2 pl-10"
@@ -121,17 +121,17 @@ function Review({ isTablet }) {
                             다운로드
                         </button>
                     </div>
-                    <table className='mb-5 w-full '>
+                    <table className='mb-5 w-full table-fixed'>
                         <thead className='text-white bg-[#768395] h-[66px]'>
                             <tr>
                                 <th className="w-[10%]">번호</th>
                                 <th className="w-[20%]">제목</th>
                                 <th className="w-[20%]">작성일</th>
                                 <th className="w-[15%]">작성자</th>
-                                <th className="w-[10%]">공개여부</th>
-                                <th className="w-[8%]">공감수</th>
-                                <th className="w-[7%]">베스트리뷰</th>
-                                <th className="w-[15%]">관리</th>
+                                <th className="w-[14%] px-2">공개여부</th>
+                                <th className="w-[11%] px-2">공감수</th>
+                                <th className="w-[11%] px-2">베스트리뷰</th>
+                                <th className="w-[10%]">관리</th>
                             </tr>
                         </thead>
                         <tbody className='text-center'>
@@ -140,7 +140,7 @@ function Review({ isTablet }) {
                                     key={user.id}
                                     className="text-[#656565] h-[66px] border-b border-b-[#D9D9D9]">
                                     <td>{String((page - 1) * pageSize + idx + 1).padStart(2, "0")}</td>
-                                    <td>{user.title}</td>
+                                    <td className="text-left truncate max-w-[100%] overflow-hidden whitespace-nowrap">{user.title}</td>
                                     <td>{user.time}</td>
                                     <td>{user.email}</td>
                                     <td className={user.status === "공개" ? "text-[#6C93FF] font-bold" : "text-[#FF0000] font-bold"}>
