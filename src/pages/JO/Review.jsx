@@ -125,12 +125,12 @@ function Review({ isTablet }) {
                         <thead className='text-white bg-[#768395] h-[66px]'>
                             <tr>
                                 <th className="w-[10%]">번호</th>
-                                <th className="w-[20%]">제목</th>
+                                <th className="w-[30%]">제목</th>
                                 <th className="w-[20%]">작성일</th>
-                                <th className="w-[15%]">작성자</th>
-                                <th className="w-[14%] px-2">공개여부</th>
-                                <th className="w-[11%] px-2">공감수</th>
-                                <th className="w-[11%] px-2">베스트리뷰</th>
+                                <th className="w-[25%]">작성자</th>
+                                <th className="w-[15%] px-2">공개여부</th>
+                                <th className="w-[13%] px-2">공감수</th>
+                                <th className="w-[13%] px-2">베스트리뷰</th>
                                 <th className="w-[10%]">관리</th>
                             </tr>
                         </thead>
@@ -142,7 +142,7 @@ function Review({ isTablet }) {
                                     <td>{String((page - 1) * pageSize + idx + 1).padStart(2, "0")}</td>
                                     <td className="text-left truncate max-w-[100%] overflow-hidden whitespace-nowrap">{user.title}</td>
                                     <td>{user.time}</td>
-                                    <td>{user.email}</td>
+                                    <td className='truncate max-w-[100%] overflow-hidden whitespace-nowrap'>{user.email}</td>
                                     <td className={user.status === "공개" ? "text-[#6C93FF] font-bold" : "text-[#FF0000] font-bold"}>
                                         {user.status}
                                     </td>
